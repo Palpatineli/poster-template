@@ -1,0 +1,79 @@
+@import "color_mit";
+@import "common";
+@import "typography";
+
+html {
+    font-size: 21.6pt;
+}
+
+@page  
+{ 
+    size: auto;   /* auto is the initial value */ 
+    margin: 0;  
+} 
+
+body  
+{ 
+    /* this affects the margin on the content before sending to printer */ 
+    margin: 0px;  
+} 
+
+body {
+    box-sizing: border-box;
+    height: 36in;
+    width: 42in;
+    padding: 1.5in;
+    border: 0px solid #000;
+    margin: 0;
+}
+
+header {
+    font-size: 1.5em;
+}
+
+content {
+    display: flex;
+    flex-direction: row;
+    .column {
+        flex-grow: 1;
+        flex-basis: 0;
+        margin: 0.375in;
+        .section {
+            h2 {
+                margin-bottom: 0.25em;
+                text-align: center;
+                font-size: 1.75rem;
+                line-height: 1.1in;
+                margin-top: 0.75em;
+            }
+        }
+        .section:nth-child(odd) {
+            h2 {
+                background-color: $color-accent;
+                color: $color-secondary;
+            }
+        }
+        .section:nth-child(even) {
+            h2 {
+                background-color: $color-secondary;
+                color: $color-primary;
+            }
+        }
+    }
+    //.column:nth-child(1) { flex-grow: 1.2; }
+    //.column:nth-child(2) { flex-grow: 1.5; }
+}
+
+.intro { font-size: 0.95em; }
+
+.summary { font-size: 1.25em; }
+
+.methods { font-size: 0.9em; }
+
+figure {
+    margin: 15pt; 
+    font-size: 0.75em;
+    img { width: 100%; }
+}
+
+.references { font-size: 0.7em; }

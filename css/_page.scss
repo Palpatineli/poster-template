@@ -1,0 +1,34 @@
+div.pageHeader { display: none }
+@media print {
+    div.pageHeader {
+        display: hidden;
+        position: running(running_title);
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-bottom: 1px;
+    }
+
+    @page {
+        counter-increment: page;
+        counter-reset: page 1;
+        margin: 0.5in 0.5in 0.5in 0.5in;
+        @top-right { 
+            content: element(pageHeader);
+        }
+        @top-left {
+            z-index: 1;
+            content: counter(page);
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+img {
+    page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-inside: avoid;
+}

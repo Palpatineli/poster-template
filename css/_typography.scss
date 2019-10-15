@@ -1,0 +1,78 @@
+@import "color_mit";
+
+body {
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures;
+    font-family: 'Roboto Slab', serif;
+    color: $color-foreground;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+h1 { 
+    font-family: "EB Garamond", serif;
+    font-weight: normal;
+    font-size: 2.5em;
+    line-height: 1em;
+    margin: auto 0;
+    text-align: center;
+}
+h2, h3, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    font-weight: bold;
+}
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3125em; }
+h4 { font-size: 1.125em; }
+h5 { font-size: 1em; }
+
+p {
+    text-align: left;
+    margin: 0.25em 0.5em; 
+}
+
+ol, ul {
+    margin: 0.05em 0.5em;
+    padding-left: 1em;
+}
+li { margin: 0.05em; }
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub { top: 0.4em; } 
+
+.indent p+p {
+    text-indent: 2;
+    margin-top: -0.5;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: $color-secondary;
+    &:hover, &:focus { text-decoration-style: solid; }
+    &:active, &:visited { color: $color-accent; }
+}
+strong {
+    color: $color-emph;
+    font-weight: normal;
+}
+
+em {
+    font-style: italic;
+    color: $color-emph;
+}
+
+code, pre {
+    font-family: monospace, serif;
+    font-size: 1;
+}
+
+q, blockquote { quotes: "\201C" "\201D" "\2018" "\2019"; }

@@ -1,0 +1,47 @@
+@import "color_mit";
+@import "page";
+@import "common";
+@import "typography";
+
+html { font-size: 10pt; }
+
+body {
+    width: 7.5in;
+    padding: 0;
+    border: 0px solid #000;
+}
+
+header { font-size: 0.75em; }
+
+.column { 
+    margin: 0;
+    .section h2 {
+        font-size: 0.8rem; 
+        margin: 0.05em 0;
+    }
+}
+
+.intro { font-size: 0.75em; }
+
+.summary { font-size: 0.9em; }
+
+.methods { font-size: 0.75em; }
+
+figure {
+    margin: 0;
+    display: inline-block;
+    figcaption {
+        font-size: 0.8em;
+        line-height: 1.05em;
+    }
+    img {
+        width: 40%;
+        float: left;
+        box-shadow: 0 0 1pt 1pt $color-primary;
+        padding: 2pt;
+        margin: 2pt 5pt 0 0;
+    }
+}
+
+.references { font-size: 0.5em; }
+h3 { font-size: 0.85em; }
